@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 
 	def index
-		@message = "This is a message from controller"
-		render :index
+		response.writer "Hello from home controller"
 	end
 end
