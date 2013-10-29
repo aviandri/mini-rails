@@ -11,15 +11,4 @@ class UserTest < Test::Unit::TestCase
 		assert_equal "Avi", user.name
 	end
 
-	def test_find
-		user = User.find(1)
-		assert_kind_of User, user
-		assert_equal 1, user.id
-	end
-
-	def test_all
-		users = User.all 
-		assert_kind_of Array, users
-		assert_equal 1, users.first.id
-	end
 end
