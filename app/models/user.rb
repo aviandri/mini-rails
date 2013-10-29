@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User
 
 	# def id
 	# 	@attributes[:id]
