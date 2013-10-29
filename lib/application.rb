@@ -1,7 +1,5 @@
 require "action_controller"
 require "app/controllers/application_controller"
-require 'router'
-require "config/routes"
 
 # class Object
 # 	def self.const_missing(name)
@@ -30,7 +28,8 @@ class Application
 
 
 	def route(path)
-		Routes.route(path)
+		_, controller, action = path.split("/")
+		[controller || "home", action || "index"]
 	end
 
 	def load_controller_class(name)
